@@ -29,6 +29,20 @@
             <key>name</key>
             <string>linux</string>
           </map>
+          <key>linux64</key>
+          <map>
+            <key>archive</key>
+            <map>
+              <key>hash</key>
+              <string>55892534ec68d04afef4a3b0a0abd760</string>
+              <key>hash_algorithm</key>
+              <string>md5</string>
+              <key>url</key>
+              <string>https://pkg.alchemyviewer.org/repository/autobuild-external/sdl/linux64/debian10/SDL-1.2.15-linux64-202202237.tar.bz2</string>
+            </map>
+            <key>name</key>
+            <string>linux64</string>
+          </map>
         </map>
         <key>version</key>
         <string>1.2.15</string>
@@ -51,7 +65,7 @@
         <key>linux</key>
         <map>
           <key>build_directory</key>
-          <string>libndofdev</string>
+          <string>stage</string>
           <key>configurations</key>
           <map>
             <key>Release</key>
@@ -74,8 +88,8 @@
           <key>manifest</key>
           <array>
             <string>include/*.h</string>
-            <string>CMakeLists.txt</string>
             <string>LICENSES/libndofdev.txt</string>
+            <string>lib/debug/*.a</string>
             <string>lib/release/*.a</string>
           </array>
           <key>name</key>
