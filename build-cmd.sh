@@ -72,6 +72,7 @@ case "$AUTOBUILD_PLATFORM" in
         CXXFLAGS="$DEBUG_CXXFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
         CPPFLAGS="$DEBUG_CPPFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
         LDFLAGS="$opts -L${stage}/packages/lib/debug" \
+        USE_SDL2=1 \
         make all
 
         cp libndofdev.a ${stage_debug}
@@ -83,6 +84,7 @@ case "$AUTOBUILD_PLATFORM" in
         CXXFLAGS="$RELEASE_CXXFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
         CPPFLAGS="$RELEASE_CPPFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
         LDFLAGS="$opts -L${stage}/packages/lib/release" \
+        USE_SDL2=1 \
         make all
 
         cp libndofdev.a ${stage_release}
