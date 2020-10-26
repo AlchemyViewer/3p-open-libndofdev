@@ -40,9 +40,7 @@ SOURCE_DIR="$PROJECT"
 "$autobuild" source_environment > "$stage/variables_setup.sh" || exit 1
 . "$stage/variables_setup.sh"
 
-
-build=${AUTOBUILD_BUILD_ID:=0}
-echo "${VERSION}.${build}" > "${stage}/VERSION.txt"
+echo "${VERSION}.0" > "${stage}/VERSION.txt"
 
 pushd "$SOURCE_DIR"
 case "$AUTOBUILD_PLATFORM" in
