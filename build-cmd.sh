@@ -62,9 +62,7 @@ case "$AUTOBUILD_PLATFORM" in
         RELEASE_CXXFLAGS="$RELEASE_COMMON_FLAGS -std=c++17"
         DEBUG_CPPFLAGS="-DPIC"
         RELEASE_CPPFLAGS="-DPIC -D_FORTIFY_SOURCE=2"
-        
-        JOBS=`cat /proc/cpuinfo | grep processor | wc -l`
-        
+
         # debug build
         CFLAGS="$DEBUG_CFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
         CXXFLAGS="$DEBUG_CXXFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
