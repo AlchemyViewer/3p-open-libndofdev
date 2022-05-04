@@ -1,9 +1,9 @@
-CFLAGS=-pipe -Wall -Wunused-result
+CFLAGS := $(CFLAGS) -pipe -Wall -Wunused-result
 ifeq ($(USE_SDL2),1)
 CFLAGS := $(CFLAGS) -DUSE_SDL2
-LDFLAGS=-lSDL2
+LDFLAGS := ${LDFLAGS} -lSDL2
 else
-LDFLAGS=-lSDL
+LDFLAGS := ${LDFLAGS} -lSDL
 endif
 
 
