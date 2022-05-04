@@ -36,18 +36,18 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>d6631c268f5f002d09c10f10a5dc8e8637f13eb450ac26d7a2aabcb6be132dd9513534ce3603643a82ce02e6913c87b610ee8d9ece440e873ec4e47590a3e645</string>
+              <string>b1b7823acb295abb4328543836cce698776a5c6f24d9e8768a492e0e93a8972203c11f62dc0d9de65272bd464b151b74de0384d93e9e3c6adc474f5deb540b5d</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.0.20.1370/SDL2-2.0.20-linux64-1370.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.0.22.1514/SDL2-2.0.22-linux64-1514.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
           </map>
         </map>
         <key>version</key>
-        <string>2.0.20</string>
+        <string>2.0.22</string>
       </map>
     </map>
     <key>package_description</key>
