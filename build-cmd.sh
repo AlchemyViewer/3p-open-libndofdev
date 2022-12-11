@@ -69,6 +69,7 @@ case "$AUTOBUILD_PLATFORM" in
         CPPFLAGS="$DEBUG_CPPFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
         LDFLAGS="$opts -L${stage}/packages/lib/debug" \
         USE_SDL2=1 \
+        DEBUG=1 \
         make all
 
         cp libndofdev.a ${stage_debug}
