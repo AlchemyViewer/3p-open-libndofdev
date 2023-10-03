@@ -1,20 +1,14 @@
 <?xml version="1.0" ?>
 <llsd>
 <map>
+    <key>version</key>
+    <string>1.3</string>
+    <key>type</key>
+    <string>autobuild</string>
     <key>installables</key>
     <map>
       <key>SDL2</key>
       <map>
-        <key>copyright</key>
-        <string>Copyright (C) 1997-2022 Sam Lantinga (slouken@libsdl.org)</string>
-        <key>description</key>
-        <string>Simple DirectMedia Layer is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.</string>
-        <key>license</key>
-        <string>lgpl</string>
-        <key>license_file</key>
-        <string>LICENSES/SDL2.txt</string>
-        <key>name</key>
-        <string>SDL2</string>
         <key>platforms</key>
         <map>
           <key>darwin64</key>
@@ -22,11 +16,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c3ae3dd66d9b93e4a090e88edf7baa686a82ca1b9f1adacee79964ce871613d02283dcfe17188c55baffc07ac4a553ca512550a4f29851d806e1a096ba02c7dd</string>
+              <string>2c1c3b8349a08e124f7f78e0ba2562fa783b05da99a9572af5177f1174ccb260a198e00871067e18fbd91e1273955d799a47b0bbeb08a777cc3d9b5492a38547</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.26.5.1999/SDL2-2.26.5-darwin64-1999.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.4.2165/SDL2-2.28.4-darwin64-2165.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -36,11 +30,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>34c1610ae560013911fc5582fb3c9096c4cf061bfd0ceae4e8b81d6c4d2e332dcd96d0f814794d2b959ac108325a36eebf31dd93156413eae0998d1f335d5d6a</string>
+              <string>ec9f831032f3f3e303b94a58636756e6d3a0d709039e2c86ee135155fcdbafa5ae29bc1754f32ce403e84075bf80e27781903a3c807f67e918f0e8959407f708</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.0.2097/SDL2-2.28.0-linux64-2097.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.4.2165/SDL2-2.28.4-linux64-2165.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -50,50 +44,48 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>c6d8f7bc5ccd140652c90ce407f702323cc743716570d6ec35ce05ea1904edd4d391522fd6d7855e9f0ddfb00f10af89b6da0d64836751aca6a13c420861b2ea</string>
+              <string>96648f32db67f1ad7accff7bf742cd4c23c91eaf29f58e9da24d099c51c23f376056e521a9a66434ae788fd53129bfeef28a15e77c5636853e98a24069d02b73</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.26.5.1999/SDL2-2.26.5-windows64-1999.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.4.2165/SDL2-2.28.4-windows64-2165.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
           </map>
         </map>
+        <key>license</key>
+        <string>lgpl</string>
+        <key>license_file</key>
+        <string>LICENSES/SDL2.txt</string>
+        <key>copyright</key>
+        <string>Copyright (C) 1997-2022 Sam Lantinga (slouken@libsdl.org)</string>
         <key>version</key>
-        <string>2.28.0</string>
+        <string>2.28.4</string>
+        <key>name</key>
+        <string>SDL2</string>
+        <key>description</key>
+        <string>Simple DirectMedia Layer is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.</string>
       </map>
     </map>
     <key>package_description</key>
     <map>
-      <key>copyright</key>
-      <string>Copyright (c) 2008, Jan Ciger (jan.ciger (at) gmail.com)</string>
-      <key>description</key>
-      <string>Open Source replacement for 3DConnection SDK</string>
-      <key>license</key>
-      <string>BSD</string>
-      <key>license_file</key>
-      <string>LICENSES/libndofdev.txt</string>
-      <key>name</key>
-      <string>open-libndofdev</string>
       <key>platforms</key>
       <map>
         <key>linux</key>
         <map>
-          <key>build_directory</key>
-          <string>stage</string>
           <key>configurations</key>
           <map>
             <key>Release</key>
             <map>
               <key>build</key>
               <map>
+                <key>command</key>
+                <string>bash</string>
                 <key>arguments</key>
                 <array>
                   <string>../build-cmd.sh</string>
-                </array>
-                <key>command</key>
-                <string>bash</string>
+</array>
               </map>
               <key>default</key>
               <string>true</string>
@@ -107,17 +99,25 @@
             <string>LICENSES/libndofdev.txt</string>
             <string>lib/debug/*.a</string>
             <string>lib/release/*.a</string>
-          </array>
+</array>
+          <key>build_directory</key>
+          <string>stage</string>
           <key>name</key>
           <string>linux</string>
         </map>
       </map>
+      <key>license</key>
+      <string>BSD</string>
+      <key>license_file</key>
+      <string>LICENSES/libndofdev.txt</string>
+      <key>copyright</key>
+      <string>Copyright (c) 2008, Jan Ciger (jan.ciger (at) gmail.com)</string>
       <key>version_file</key>
       <string>VERSION.txt</string>
+      <key>name</key>
+      <string>open-libndofdev</string>
+      <key>description</key>
+      <string>Open Source replacement for 3DConnection SDK</string>
     </map>
-    <key>type</key>
-    <string>autobuild</string>
-    <key>version</key>
-    <string>1.3</string>
   </map>
 </llsd>
