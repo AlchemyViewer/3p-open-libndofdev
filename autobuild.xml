@@ -16,11 +16,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ef2b13ee228d1f1f73720f9b04aa9cc9e94aebc4d2efb94d992f6c6845034ddd453f3d1f11c54b34754e38873da8ccab325a0bedf144bde3ed6393ceb3aa490d</string>
+              <string>acf8bb9b89463d4c6e6431954471346a7f86dc53d843faa23ac302eff8fad90cb3b97bbd4ff2d0785ade4f36237b1070330c8ea5fef844723a96defe044fac4a</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.5.2281/SDL2-2.28.5-darwin64-2281.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-darwin64-2372.tar.zst</string>
             </map>
             <key>name</key>
             <string>darwin64</string>
@@ -30,11 +30,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>8a1052cac27cb42738b53f22d494da92a984fefaba182ce855c60b6af751cbc43d11106d7dc62167238c4aafe52a1b476bf750a502fd24af363f795a790b0652</string>
+              <string>7d3d1c2216c38167b0cf97ca040ff1a267e69c06c04c018108ead675bd508cea7718f6498985ca9c676801ef075336d8c777bf4b4802308c082f633ab5025e0b</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.5.2281/SDL2-2.28.5-linux64-2281.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-linux64-2372.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -44,11 +44,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ee126ebe66baa71d05cf477bd12e3990986e720e630a170e5ea1010ad2a51a68a2b96e917acd98445b95bcbf2591cd3714fff23d9c6bfcb90bdd1daac254f137</string>
+              <string>74b6c4d4793df82a4e20dcb85b6e18a4db1a940bae5d293c103aa2333ba4d3345bd5c513f5a132daa1e7f2956fd2da169703a6f911f5c432727f11dc476ad2fd</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.28.5.2281/SDL2-2.28.5-windows64-2281.tar.zst</string>
+              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-windows64-2372.tar.zst</string>
             </map>
             <key>name</key>
             <string>windows64</string>
@@ -59,9 +59,9 @@
         <key>license_file</key>
         <string>LICENSES/SDL2.txt</string>
         <key>copyright</key>
-        <string>Copyright (C) 1997-2022 Sam Lantinga (slouken@libsdl.org)</string>
+        <string>Copyright (C) 1997-2024 Sam Lantinga (slouken@libsdl.org)</string>
         <key>version</key>
-        <string>2.28.5</string>
+        <string>2.30.0</string>
         <key>name</key>
         <string>SDL2</string>
         <key>description</key>
