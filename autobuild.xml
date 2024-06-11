@@ -69,7 +69,6 @@
           <array>
             <string>include/*.h</string>
             <string>LICENSES/libndofdev.txt</string>
-            <string>lib/debug/*.a</string>
             <string>lib/release/*.a</string>
 </array>
           <key>build_directory</key>

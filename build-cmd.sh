@@ -23,11 +23,9 @@ fi
 top="$(pwd)"
 stage="$(pwd)/stage"
 stage_include="$stage/include/"
-stage_debug="$stage/lib/debug/"
 stage_release="$stage/lib/release/"
 
 mkdir -p ${stage_include}
-mkdir -p ${stage_debug}
 mkdir -p ${stage_release}
 
 PROJECT="libndofdev"
