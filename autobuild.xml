@@ -11,47 +11,19 @@
       <map>
         <key>platforms</key>
         <map>
-          <key>darwin64</key>
-          <map>
-            <key>archive</key>
-            <map>
-              <key>hash</key>
-              <string>acf8bb9b89463d4c6e6431954471346a7f86dc53d843faa23ac302eff8fad90cb3b97bbd4ff2d0785ade4f36237b1070330c8ea5fef844723a96defe044fac4a</string>
-              <key>hash_algorithm</key>
-              <string>blake2b</string>
-              <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-darwin64-2372.tar.zst</string>
-            </map>
-            <key>name</key>
-            <string>darwin64</string>
-          </map>
           <key>linux64</key>
           <map>
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>7d3d1c2216c38167b0cf97ca040ff1a267e69c06c04c018108ead675bd508cea7718f6498985ca9c676801ef075336d8c777bf4b4802308c082f633ab5025e0b</string>
+              <string>fe47b8bff02bba3bff2d07194769bd79d80900509f30fdabbf5f73849a582ced9ccbeaa4a4f0bd724df34b6dc0e354109a8bde81b389a1568c3ce822f36cde48</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-linux64-2372.tar.zst</string>
+              <string>https://github.com/AlchemyViewer/3p-sdl2/releases/download/v2.30.0-958285a/SDL2-2.30.0-linux64-9459243145.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
-          </map>
-          <key>windows64</key>
-          <map>
-            <key>archive</key>
-            <map>
-              <key>hash</key>
-              <string>74b6c4d4793df82a4e20dcb85b6e18a4db1a940bae5d293c103aa2333ba4d3345bd5c513f5a132daa1e7f2956fd2da169703a6f911f5c432727f11dc476ad2fd</string>
-              <key>hash_algorithm</key>
-              <string>blake2b</string>
-              <key>url</key>
-              <string>https://git.alchemyviewer.org/api/v4/projects/100/packages/generic/SDL2/2.30.0.2372/SDL2-2.30.0-windows64-2372.tar.zst</string>
-            </map>
-            <key>name</key>
-            <string>windows64</string>
           </map>
         </map>
         <key>license</key>

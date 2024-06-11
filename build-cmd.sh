@@ -82,7 +82,8 @@ case "$AUTOBUILD_PLATFORM" in
         cp ndofdev_external.h ${stage_include}
     ;;
 esac
-popd
 
 mkdir -p ${stage}/LICENSES
 cp LICENSE ${stage}/LICENSES/libndofdev.txt
+
+popd
