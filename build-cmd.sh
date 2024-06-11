@@ -49,45 +49,36 @@ case "$AUTOBUILD_PLATFORM" in
         # hardcode the actual URL of the current project's libndofdev
         # repository in this message. Try to determine the URL of this
         # open-libndofdev repository and remove "open-" as a suggestion.
-        echo "Windows/Mac libndofdev is in a separate bitbucket repository \
-        -- try $(hg paths default | sed -E 's/open-(libndofdev)/\1/')" 1>&2 ; exit 1
+        echo "Windows/Mac libndofdev is in a separate GitHub repository" 1>&2 ; exit 1
     ;;
     linux*)
-        opts="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE}"
-        DEBUG_COMMON_FLAGS="$opts -Og -g -fPIC -DPIC"
-        RELEASE_COMMON_FLAGS="$opts -O3 -g -fPIC -fstack-protector-strong -DPIC -D_FORTIFY_SOURCE=2"
-        DEBUG_CFLAGS="$DEBUG_COMMON_FLAGS"
-        RELEASE_CFLAGS="$RELEASE_COMMON_FLAGS"
-        DEBUG_CXXFLAGS="$DEBUG_COMMON_FLAGS -std=c++17"
-        RELEASE_CXXFLAGS="$RELEASE_COMMON_FLAGS -std=c++17"
-        DEBUG_CPPFLAGS="-DPIC"
-        RELEASE_CPPFLAGS="-DPIC -D_FORTIFY_SOURCE=2"
+        # Linux build environment at Linden comes pre-polluted with stuff that can
+        # seriously damage 3rd-party builds.  Environmental garbage you can expect
+        # includes:
+        #
+        #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
+        #    DISTCC_LOCATION            top            branch      CC
+        #    DISTCC_HOSTS               build_name     suffix      CXX
+        #    LSDISTCC_ARGS              repo           prefix      CFLAGS
+        #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
+        #
+        # So, clear out bits that shouldn't affect our configure-directed build
+        # but which do nonetheless.
+        #
+        unset DISTCC_HOSTS CFLAGS CPPFLAGS CXXFLAGS
 
-        # debug build
-        CFLAGS="$DEBUG_CFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
-        CXXFLAGS="$DEBUG_CXXFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
-        CPPFLAGS="$DEBUG_CPPFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/debug" \
-        LDFLAGS="$opts -L${stage}/packages/lib/debug" \
-        USE_SDL2=1 \
-        DEBUG=1 \
-        make all
-
-        cp libndofdev.a ${stage_debug}
-
-        make clean
+        # Default target per --address-size
+        opts_c="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE_CFLAGS}"
+        opts_cxx="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE_CXXFLAGS}"
 
         # release build
-        CFLAGS="$RELEASE_CFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
-        CXXFLAGS="$RELEASE_CXXFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
-        CPPFLAGS="$RELEASE_CPPFLAGS -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
-        LDFLAGS="$opts -L${stage}/packages/lib/release" \
+        CFLAGS="$opts_c -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
+        CXXFLAGS="$opts_cxx -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
+        LDFLAGS="-L${stage}/packages/lib/release" \
         USE_SDL2=1 \
         make all
 
         cp libndofdev.a ${stage_release}
-
-        make clean
-
         cp ndofdev_external.h ${stage_include}
     ;;
 esac
