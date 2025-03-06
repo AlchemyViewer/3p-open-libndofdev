@@ -7,7 +7,7 @@
     <string>autobuild</string>
     <key>installables</key>
     <map>
-      <key>SDL2</key>
+      <key>SDL3</key>
       <map>
         <key>platforms</key>
         <map>
@@ -16,11 +16,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>fe47b8bff02bba3bff2d07194769bd79d80900509f30fdabbf5f73849a582ced9ccbeaa4a4f0bd724df34b6dc0e354109a8bde81b389a1568c3ce822f36cde48</string>
+              <string>ad6d15e97f78d413612061af8929c0a6b54ef297cc7dc5c21959d295d4263d48ed9c71b524a62a9bc68df534abb4aa3f61ed5d7e1dd64f414170547511d2eb73</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://github.com/AlchemyViewer/3p-sdl2/releases/download/v2.30.0-958285a/SDL2-2.30.0-linux64-9459243145.tar.zst</string>
+              <string>https://github.com/AlchemyViewer/3p-sdl3/releases/download/v3.2.8-r1/SDL3-3.2.8-r1-linux64-13702972961.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -29,13 +29,13 @@
         <key>license</key>
         <string>lgpl</string>
         <key>license_file</key>
-        <string>LICENSES/SDL2.txt</string>
+        <string>LICENSES/SDL3.txt</string>
         <key>copyright</key>
-        <string>Copyright (C) 1997-2024 Sam Lantinga (slouken@libsdl.org)</string>
+        <string>Copyright (C) 1997-2022 Sam Lantinga (slouken@libsdl.org)</string>
         <key>version</key>
-        <string>2.30.0</string>
+        <string>3.2.8-r1</string>
         <key>name</key>
-        <string>SDL2</string>
+        <string>SDL3</string>
         <key>description</key>
         <string>Simple DirectMedia Layer is a cross-platform multimedia library designed to provide low level access to audio, keyboard, mouse, joystick, 3D hardware via OpenGL, and 2D video framebuffer.</string>
       </map>
@@ -57,7 +57,7 @@
                 <key>arguments</key>
                 <array>
                   <string>../build-cmd.sh</string>
-</array>
+                </array>
               </map>
               <key>default</key>
               <string>true</string>
@@ -70,7 +70,7 @@
             <string>include/*.h</string>
             <string>LICENSES/libndofdev.txt</string>
             <string>lib/release/*.a</string>
-</array>
+          </array>
           <key>build_directory</key>
           <string>stage</string>
           <key>name</key>
