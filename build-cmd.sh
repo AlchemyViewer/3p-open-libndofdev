@@ -40,6 +40,9 @@ SOURCE_DIR="$PROJECT"
 
 echo "${VERSION}.0" > "${stage}/VERSION.txt"
 
+# remove_cxxstd
+source "$(dirname "$AUTOBUILD_VARIABLES_FILE")/functions"
+
 pushd "$SOURCE_DIR"
 case "$AUTOBUILD_PLATFORM" in
     windows*|darwin*)
@@ -50,30 +53,15 @@ case "$AUTOBUILD_PLATFORM" in
         echo "Windows/Mac libndofdev is in a separate GitHub repository" 1>&2 ; exit 1
     ;;
     linux*)
-        # Linux build environment at Linden comes pre-polluted with stuff that can
-        # seriously damage 3rd-party builds.  Environmental garbage you can expect
-        # includes:
-        #
-        #    DISTCC_POTENTIAL_HOSTS     arch           root        CXXFLAGS
-        #    DISTCC_LOCATION            top            branch      CC
-        #    DISTCC_HOSTS               build_name     suffix      CXX
-        #    LSDISTCC_ARGS              repo           prefix      CFLAGS
-        #    cxx_version                AUTOBUILD      SIGN        CPPFLAGS
-        #
-        # So, clear out bits that shouldn't affect our configure-directed build
-        # but which do nonetheless.
-        #
-        unset DISTCC_HOSTS CFLAGS CPPFLAGS CXXFLAGS
-
-        # Default target per --address-size
-        opts_c="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE_CFLAGS}"
-        opts_cxx="${TARGET_OPTS:--m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE_CXXFLAGS}"
+        # Default target per autobuild build --address-size
+        opts="-m$AUTOBUILD_ADDRSIZE $LL_BUILD_RELEASE"
+        plainopts="$(remove_cxxstd $opts)"
 
         # release build
-        CFLAGS="$opts_c -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
-        CXXFLAGS="$opts_cxx -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
+        CFLAGS="$plainopts -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
+        CXXFLAGS="$opts -I${stage}/packages/include -Wl,-L${stage}/packages/lib/release" \
         LDFLAGS="-L${stage}/packages/lib/release" \
-        USE_SDL2=1 \
+        USE_SDL3=1 \
         make all
 
         cp libndofdev.a ${stage_release}

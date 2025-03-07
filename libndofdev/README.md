@@ -41,7 +41,7 @@ from the list above - that's the only way to get the problems fixed.
 
 In addition, the library supports every joystick/gamepad device
 supported by the SDL library. SDL2 is supported by passing a flag to
-the makefile: `USE_SDL2=1 make`
+the makefile: `USE_SDL2=1 make` SDL3 is supported by passing USE_SDL3
 
 
 C A U T I O N !!!
