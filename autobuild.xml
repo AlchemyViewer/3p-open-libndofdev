@@ -16,11 +16,11 @@
             <key>archive</key>
             <map>
               <key>hash</key>
-              <string>ad6d15e97f78d413612061af8929c0a6b54ef297cc7dc5c21959d295d4263d48ed9c71b524a62a9bc68df534abb4aa3f61ed5d7e1dd64f414170547511d2eb73</string>
+              <string>5562e019ca4288493c25d7d5bac45091834db602a112892ddaba4f7a29148f5807b03319770f510c13e237c66f11acc0d6efaad11df0b2ac750623424adb3b4a</string>
               <key>hash_algorithm</key>
               <string>blake2b</string>
               <key>url</key>
-              <string>https://github.com/AlchemyViewer/3p-sdl3/releases/download/v3.2.8-r1/SDL3-3.2.8-r1-linux64-13702972961.tar.zst</string>
+              <string>https://github.com/AlchemyViewer/3p-sdl3/releases/download/v3.2.22-r1/SDL3-3.2.22-r1-linux64-17459306396.tar.zst</string>
             </map>
             <key>name</key>
             <string>linux64</string>
@@ -33,7 +33,7 @@
         <key>copyright</key>
         <string>Copyright (C) 1997-2022 Sam Lantinga (slouken@libsdl.org)</string>
         <key>version</key>
-        <string>3.2.8-r1</string>
+        <string>3.2.22-r1</string>
         <key>name</key>
         <string>SDL3</string>
         <key>description</key>
